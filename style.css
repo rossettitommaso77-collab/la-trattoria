@@ -1,0 +1,562 @@
+
+/* IMPOSTAZIONI GENERALI */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, serif;
+    background-color: #f8f3eb;
+    color: #38291f;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+section {
+    scroll-margin-top: 85px;
+}
+
+.sottotitolo {
+    color: #a34e32;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 18px;
+}
+
+/* NAVIGAZIONE */
+header {
+    background-color: #38291f;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    color: #e5b887;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+}
+
+.nav-links a {
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #e5b887;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* HOME */
+.hero {
+    min-height: 550px;
+    background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600")
+        center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 50px 20px;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 65px);
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #a34e32;
+    color: white;
+    padding: 13px 25px;
+    border-radius: 4px;
+    margin-top: 12px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #783820;
+}
+
+/* STORIA */
+.storia {
+    max-width: 1150px;
+    margin: auto;
+    padding: 90px 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.storia-img img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.storia-text p {
+    margin-bottom: 15px;
+}
+
+/* TITOLI SEZIONI */
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+    padding: 0 20px;
+}
+
+.section-title h2 {
+    margin-bottom: 10px;
+}
+
+/* MENU */
+.menu {
+    background-color: #eee5d8;
+    padding: 85px 30px;
+}
+
+.menu-container {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.menu-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 25px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.menu-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.menu-card h3 {
+    font-size: 23px;
+    margin: 18px 10px 8px;
+}
+
+.menu-card p {
+    padding: 0 15px;
+    margin-bottom: 12px;
+}
+
+.menu-card span {
+    color: #a34e32;
+    font-weight: bold;
+}
+
+/* DETTAGLIO MENU */
+.dettaglio-menu {
+    max-width: 800px;
+    margin: 55px auto 0;
+    display: grid;
+    gap: 25px;
+}
+
+.categoria-menu {
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 8px;
+    scroll-margin-top: 100px;
+}
+
+.categoria-menu h3 {
+    color: #a34e32;
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.lista-piatti {
+    list-style: none;
+    text-align: left;
+}
+
+.lista-piatti li {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 12px 0;
+    border-bottom: 1px solid #dfd1bd;
+}
+
+.lista-piatti span {
+    color: #a34e32;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* GALLERIA */
+.galleria {
+    padding: 85px 30px;
+}
+
+.gallery-container {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.03);
+}
+
+/* PRENOTAZIONE */
+.prenotazione {
+    background-color: #38291f;
+    color: white;
+    text-align: center;
+    padding: 75px 20px;
+}
+
+.prenotazione h2 {
+    color: #e5b887;
+}
+
+/* CONTATTI */
+.contatti {
+    padding: 85px 30px;
+}
+
+.contatti-container {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.contatti-container h3 {
+    color: #a34e32;
+    margin-bottom: 10px;
+}
+
+/* FOOTER */
+footer {
+    background-color: #38291f;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+    font-size: 13px;
+}
+
+/* TABLET */
+@media (max-width: 800px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #38291f;
+        flex-direction: column;
+        gap: 0;
+        padding: 10px 25px 20px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 12px 0;
+    }
+
+    .storia {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .menu-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gallery-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contatti-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}
+
+/* SMARTPHONE */
+@media (max-width: 500px) {
+    h2 {
+        font-size: 29px;
+    }
+
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .hero {
+        min-height: 480px;
+    }
+
+    .menu-container {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-container img {
+        height: 240px;
+    }
+
+    .storia {
+        padding: 60px 20px;
+    }
+
+    .storia-img img {
+        height: 260px;
+    }
+
+    .menu,
+    .galleria,
+    .contatti {
+        padding: 60px 20px;
+    }
+
+    .categoria-menu {
+        padding: 20px;
+    }
+}
+/* ANIMAZIONI */
+@keyframes comparsa {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content {
+    animation: comparsa 1s ease-out;
+}
+
+.menu-card,
+.storia-img,
+.gallery-container img {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.menu-card:hover,
+.gallery-container img:hover {
+    box-shadow: 0 12px 28px rgba(56, 41, 31, 0.18);
+}
+
+/* PULSANTE TORNA SU */
+#torna-su {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background: #a34e32;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: 0.3s ease;
+    z-index: 90;
+}
+
+#torna-su.visibile {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#torna-su:hover {
+    background: #783820;
+    transform: translateY(-4px);
+}
+
+/* ACCESSIBILITÀ: RIDUCE LE ANIMAZIONI SE RICHIESTO */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+/* MODULO PRENOTAZIONE */
+.prenotazione {
+    background: #eee5d8;
+    color: #38291f;
+    padding: 85px 20px;
+}
+
+.prenotazione-intro {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 35px;
+}
+
+.prenotazione-intro h2 {
+    color: #38291f;
+}
+
+.form-prenotazione {
+    background: white;
+    max-width: 650px;
+    margin: auto;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 10px 35px rgba(56, 41, 31, 0.10);
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.campo label {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #dfd1bd;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    background: #fdfbf8;
+    color: #38291f;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    outline: none;
+    border-color: #a34e32;
+    box-shadow: 0 0 0 3px rgba(163, 78, 50, 0.12);
+}
+
+.campo textarea {
+    resize: vertical;
+}
+
+.btn-prenota {
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.nota-prenotazione {
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+    margin-top: 15px;
+}
+
+@media (max-width: 500px) {
+    .form-prenotazione {
+        padding: 22px 18px;
+    }
+}

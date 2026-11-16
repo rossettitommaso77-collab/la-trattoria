@@ -1,0 +1,306 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="La Trattoria - Il sapore autentico della tradizione.">
+    <title>La Trattoria | Cucina tradizionale</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- NAVIGAZIONE -->
+    <header>
+        <nav class="navbar">
+            <a href="#home" class="logo">La Trattoria</a>
+
+            <button class="menu-toggle"
+                aria-label="Apri il menu"
+                aria-expanded="false">
+                ☰
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#storia">La nostra storia</a></li>
+                <li><a href="#menu">Il menu</a></li>
+                <li><a href="#galleria">Galleria</a></li>
+                <li><a href="#contatti">Contatti</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HOME -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="sottotitolo">Tradizione, passione e qualità</p>
+                <h1>Il sapore autentico della tradizione.</h1>
+                <p>Piatti genuini, ingredienti freschi e il piacere di stare a tavola.</p>
+                <a href="#menu" class="btn">Scopri il nostro menu</a>
+            </div>
+        </section>
+
+        <!-- STORIA -->
+        <section class="storia" id="storia">
+            <div class="storia-img">
+                <img
+                    src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900"
+                    alt="Tavola apparecchiata in un ristorante">
+            </div>
+
+            <div class="storia-text">
+                <p class="sottotitolo">La nostra filosofia</p>
+                <h2>Una cucina fatta con il cuore</h2>
+                <p>
+                    Crediamo nella semplicità delle cose buone.
+                    Selezioniamo ingredienti di qualità e prepariamo
+                    ogni piatto ispirandoci alla tradizione italiana.
+                </p>
+                <p>
+                    Il nostro obiettivo è far sentire ogni ospite
+                    come a casa, tra sapori autentici e un'atmosfera
+                    accogliente.
+                </p>
+            </div>
+        </section>
+
+        <!-- MENU -->
+        <section class="menu" id="menu">
+            <div class="section-title">
+                <p class="sottotitolo">Le nostre specialità</p>
+                <h2>Il nostro menu</h2>
+                <p>Scegli una categoria per scoprire i nostri piatti.</p>
+            </div>
+
+            <div class="menu-container">
+
+                <a href="#primi-piatti" class="menu-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=700"
+                        alt="Piatto di pasta">
+                    <h3>Primi piatti</h3>
+                    <p>Pasta fresca e ricette della tradizione.</p>
+                    <span>Scopri i piatti ↓</span>
+                </a>
+
+                <a href="#secondi-piatti" class="menu-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1544025162-d76694265947?w=700"
+                        alt="Piatto di carne">
+                    <h3>Secondi piatti</h3>
+                    <p>Carne, specialità e sapori genuini.</p>
+                    <span>Scopri i piatti ↓</span>
+                </a>
+
+                <a href="#dolci" class="menu-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=700"
+                        alt="Dolce al cioccolato">
+                    <h3>Dolci</h3>
+                    <p>Il modo perfetto per concludere il pasto.</p>
+                    <span>Scopri i piatti ↓</span>
+                </a>
+
+            </div>
+
+            <!-- ELENCO DEI PIATTI -->
+            <div class="dettaglio-menu">
+
+                <div class="categoria-menu" id="primi-piatti">
+                    <h3>Primi piatti</h3>
+                    <ul class="lista-piatti">
+                        <li>Tagliatelle al ragù <span>€ 12</span></li>
+                        <li>Risotto ai funghi <span>€ 13</span></li>
+                        <li>Ravioli fatti in casa <span>€ 14</span></li>
+                    </ul>
+                </div>
+
+                <div class="categoria-menu" id="secondi-piatti">
+                    <h3>Secondi piatti</h3>
+                    <ul class="lista-piatti">
+                        <li>Tagliata di manzo <span>€ 19</span></li>
+                        <li>Arrosto della casa <span>€ 16</span></li>
+                        <li>Grigliata mista <span>€ 22</span></li>
+                    </ul>
+                </div>
+
+                <div class="categoria-menu" id="dolci">
+                    <h3>Dolci</h3>
+                    <ul class="lista-piatti">
+                        <li>Tiramisù fatto in casa <span>€ 6</span></li>
+                        <li>Panna cotta <span>€ 5</span></li>
+                        <li>Crostata della casa <span>€ 6</span></li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- GALLERIA -->
+        <section class="galleria" id="galleria">
+            <div class="section-title">
+                <p class="sottotitolo">I nostri ambienti</p>
+                <h2>La nostra galleria</h2>
+            </div>
+
+            <div class="gallery-container">
+                <img
+                    src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700"
+                    alt="Interno del ristorante">
+
+                <img
+                    src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=700"
+                    alt="Piatto preparato">
+
+                <img
+                    src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=700"
+                    alt="Sala di un ristorante">
+            </div>
+        </section>
+
+       
+<!-- PRENOTAZIONE -->
+<section class="prenotazione" id="prenotazione">
+    <div class="prenotazione-intro">
+        <p class="sottotitolo">La tua esperienza inizia qui</p>
+        <h2>Prenota il tuo tavolo</h2>
+        <p>
+            Compila il modulo e inviaci la tua richiesta
+            direttamente su WhatsApp.
+        </p>
+    </div>
+
+    <form id="form-prenotazione" class="form-prenotazione">
+
+        <div class="campo">
+            <label for="nome">Nome e cognome</label>
+            <input
+                type="text"
+                id="nome"
+                name="nome"
+                placeholder="Es. Mario Rossi"
+                required>
+        </div>
+
+        <div class="campo">
+            <label for="telefono">Numero di telefono</label>
+            <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                placeholder="Es. 333 1234567"
+                required>
+        </div>
+
+        <div class="campo">
+            <label for="data">Data</label>
+            <input
+                type="date"
+                id="data"
+                name="data"
+                required>
+        </div>
+
+        <div class="campo">
+            <label for="orario">Orario</label>
+            <select id="orario" name="orario" required>
+                <option value="">Seleziona un orario</option>
+                <option value="12:00">12:00</option>
+                <option value="12:30">12:30</option>
+                <option value="13:00">13:00</option>
+                <option value="13:30">13:30</option>
+                <option value="19:00">19:00</option>
+                <option value="19:30">19:30</option>
+                <option value="20:00">20:00</option>
+                <option value="20:30">20:30</option>
+                <option value="21:00">21:00</option>
+            </select>
+        </div>
+
+        <div class="campo">
+            <label for="persone">Numero di persone</label>
+            <select id="persone" name="persone" required>
+                <option value="">Seleziona</option>
+                <option value="1">1 persona</option>
+                <option value="2">2 persone</option>
+                <option value="3">3 persone</option>
+                <option value="4">4 persone</option>
+                <option value="5">5 persone</option>
+                <option value="6">6 persone</option>
+                <option value="7">7 persone</option>
+                <option value="8">8 persone</option>
+                <option value="9 o più">9 o più persone</option>
+            </select>
+        </div>
+
+        <div class="campo">
+            <label for="richieste">Richieste particolari (facoltativo)</label>
+            <textarea
+                id="richieste"
+                name="richieste"
+                rows="4"
+                placeholder="Allergie, seggiolone, occasioni speciali..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-prenota">
+            Invia richiesta su WhatsApp
+        </button>
+
+        <p class="nota-prenotazione">
+            La richiesta non costituisce una prenotazione confermata.
+            Attendi la risposta del ristorante.
+        </p>
+
+    </form>
+</section>
+
+        <section class="prenotazione">
+            <div>
+                <p class="sottotitolo">Ti aspettiamo</p>
+                <h2>Vieni a trovarci!</h2>
+                <p>Contattaci per informazioni o per prenotare un tavolo.</p>
+                <a href="#contatti" class="btn">Contattaci</a>
+            </div>
+        </section>
+
+        <!-- CONTATTI -->
+        <section class="contatti" id="contatti">
+            <div class="section-title">
+                <p class="sottotitolo">Dove siamo</p>
+                <h2>Contatti e informazioni</h2>
+            </div>
+
+            <div class="contatti-container">
+                <div>
+                    <h3>Indirizzo</h3>
+                    <p>Via Roma 10, Brescia</p>
+                </div>
+
+                <div>
+                    <h3>Telefono</h3>
+                    <p>030 0000000</p>
+                </div>
+
+                <div>
+                    <h3>Orari</h3>
+                    <p>Da martedì a domenica</p>
+                    <p>12:00 - 14:30 / 19:00 - 22:30</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 La Trattoria - Tutti i diritti riservati.</p>
+        <p>Progetto dimostrativo: dati, prezzi e contatti sono inventati.</p>
+    </footer>
+<button id="torna-su" aria-label="Torna all'inizio">↑</button>
+</body>
+</html>
