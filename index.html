@@ -4,8 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="La Trattoria - Il sapore autentico della tradizione.">
-    <title>La Trattoria | Cucina tradizionale</title>
+    <meta name="description" content="Sito dimostrativo di una trattoria: cucina tradizionale, menu e richieste di prenotazione di esempio. Dati e contatti sono inventati.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:title" content="La Trattoria | Sito dimostrativo">
+    <meta property="og:description" content="Sito dimostrativo di una trattoria. Menu, prezzi e contatti sono di esempio.">
+    <title>La Trattoria | Sito dimostrativo di cucina tradizionale</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
@@ -14,16 +18,18 @@
 
     <!-- NAVIGAZIONE -->
     <header>
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Navigazione principale">
             <a href="#home" class="logo">La Trattoria</a>
 
             <button class="menu-toggle"
+                type="button"
                 aria-label="Apri il menu"
+                aria-controls="nav-links"
                 aria-expanded="false">
                 ☰
             </button>
 
-            <ul class="nav-links">
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#storia">La nostra storia</a></li>
                 <li><a href="#menu">Il menu</a></li>
@@ -42,6 +48,7 @@
                 <h1>Il sapore autentico della tradizione.</h1>
                 <p>Piatti genuini, ingredienti freschi e il piacere di stare a tavola.</p>
                 <a href="#menu" class="btn">Scopri il nostro menu</a>
+                <p class="nota-foto-hero">Fotografia illustrativa</p>
             </div>
         </section>
 
@@ -49,8 +56,10 @@
         <section class="storia" id="storia">
             <div class="storia-img">
                 <img
-                    src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900"
-                    alt="Tavola apparecchiata in un ristorante">
+                    src="https://images.unsplash.com/photo-1604931920035-e6316baed0e3?auto=format&amp;fit=crop&amp;w=1100&amp;h=1000&amp;q=85"
+                    alt="Immagine illustrativa: tavolo apparecchiato in una trattoria italiana"
+                    loading="lazy"
+                    decoding="async">
             </div>
 
             <div class="storia-text">
@@ -75,14 +84,17 @@
                 <p class="sottotitolo">Le nostre specialità</p>
                 <h2>Il nostro menu</h2>
                 <p>Scegli una categoria per scoprire i nostri piatti.</p>
+                <p class="nota-immagini">Le fotografie sono illustrative e non rappresentano necessariamente i piatti serviti.</p>
             </div>
 
             <div class="menu-container">
 
                 <a href="#primi-piatti" class="menu-card">
                     <img
-                        src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=700"
-                        alt="Piatto di pasta">
+                        src="https://images.unsplash.com/photo-1678774055677-f61466b1cd5d?auto=format&amp;fit=crop&amp;w=900&amp;h=560&amp;q=85"
+                        alt="Immagine illustrativa di un piatto di pasta"
+                        loading="lazy"
+                        decoding="async">
                     <h3>Primi piatti</h3>
                     <p>Pasta fresca e ricette della tradizione.</p>
                     <span>Scopri i piatti ↓</span>
@@ -90,8 +102,10 @@
 
                 <a href="#secondi-piatti" class="menu-card">
                     <img
-                        src="https://images.unsplash.com/photo-1544025162-d76694265947?w=700"
-                        alt="Piatto di carne">
+                        src="https://images.unsplash.com/photo-1774921676942-90c6cfe9d541?auto=format&amp;fit=crop&amp;w=900&amp;h=560&amp;q=85"
+                        alt="Immagine illustrativa di una bistecca con contorno"
+                        loading="lazy"
+                        decoding="async">
                     <h3>Secondi piatti</h3>
                     <p>Carne, specialità e sapori genuini.</p>
                     <span>Scopri i piatti ↓</span>
@@ -99,8 +113,10 @@
 
                 <a href="#dolci" class="menu-card">
                     <img
-                        src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=700"
-                        alt="Dolce al cioccolato">
+                        src="https://images.unsplash.com/photo-1673720111789-e2cff16bea90?auto=format&amp;fit=crop&amp;w=900&amp;h=560&amp;q=85"
+                        alt="Immagine illustrativa di una porzione di tiramisù"
+                        loading="lazy"
+                        decoding="async">
                     <h3>Dolci</h3>
                     <p>Il modo perfetto per concludere il pasto.</p>
                     <span>Scopri i piatti ↓</span>
@@ -114,27 +130,27 @@
                 <div class="categoria-menu" id="primi-piatti">
                     <h3>Primi piatti</h3>
                     <ul class="lista-piatti">
-                        <li>Tagliatelle al ragù <span>€ 12</span></li>
-                        <li>Risotto ai funghi <span>€ 13</span></li>
-                        <li>Ravioli fatti in casa <span>€ 14</span></li>
+                        <li><span class="nome-piatto">Tagliatelle al ragù</span><span class="prezzo">€ 12</span></li>
+                        <li><span class="nome-piatto">Risotto ai funghi</span><span class="prezzo">€ 13</span></li>
+                        <li><span class="nome-piatto">Ravioli fatti in casa</span><span class="prezzo">€ 14</span></li>
                     </ul>
                 </div>
 
                 <div class="categoria-menu" id="secondi-piatti">
                     <h3>Secondi piatti</h3>
                     <ul class="lista-piatti">
-                        <li>Tagliata di manzo <span>€ 19</span></li>
-                        <li>Arrosto della casa <span>€ 16</span></li>
-                        <li>Grigliata mista <span>€ 22</span></li>
+                        <li><span class="nome-piatto">Tagliata di manzo</span><span class="prezzo">€ 19</span></li>
+                        <li><span class="nome-piatto">Arrosto della casa</span><span class="prezzo">€ 16</span></li>
+                        <li><span class="nome-piatto">Grigliata mista</span><span class="prezzo">€ 22</span></li>
                     </ul>
                 </div>
 
                 <div class="categoria-menu" id="dolci">
                     <h3>Dolci</h3>
                     <ul class="lista-piatti">
-                        <li>Tiramisù fatto in casa <span>€ 6</span></li>
-                        <li>Panna cotta <span>€ 5</span></li>
-                        <li>Crostata della casa <span>€ 6</span></li>
+                        <li><span class="nome-piatto">Tiramisù fatto in casa</span><span class="prezzo">€ 6</span></li>
+                        <li><span class="nome-piatto">Panna cotta</span><span class="prezzo">€ 5</span></li>
+                        <li><span class="nome-piatto">Crostata della casa</span><span class="prezzo">€ 6</span></li>
                     </ul>
                 </div>
 
@@ -150,17 +166,30 @@
 
             <div class="gallery-container">
                 <img
-                    src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700"
-                    alt="Interno del ristorante">
+                    src="https://images.unsplash.com/photo-1792354054692-8c9a69e84ed5?auto=format&amp;fit=crop&amp;w=1000&amp;h=720&amp;q=85"
+                    alt="Immagine illustrativa: pasta fresca appena preparata"
+                    loading="lazy"
+                    decoding="async">
 
                 <img
-                    src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=700"
-                    alt="Piatto preparato">
+                    src="https://images.unsplash.com/photo-1760390952710-b0e010ec4e50?auto=format&amp;fit=crop&amp;w=1000&amp;h=720&amp;q=85"
+                    alt="Immagine illustrativa: piatto di lasagne al pomodoro e formaggio"
+                    loading="lazy"
+                    decoding="async">
 
                 <img
-                    src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=700"
-                    alt="Sala di un ristorante">
+                    src="https://images.unsplash.com/photo-1756831567129-a7f9e6ecb436?auto=format&amp;fit=crop&amp;w=1000&amp;h=720&amp;q=85"
+                    alt="Immagine illustrativa: sala rustica con travi e tavoli in legno"
+                    loading="lazy"
+                    decoding="async">
+
+                <img
+                    src="https://images.unsplash.com/photo-1683803142077-e6afa3cb00cf?auto=format&amp;fit=crop&amp;w=1000&amp;h=720&amp;q=85"
+                    alt="Immagine illustrativa: tavolo in legno apparecchiato in stile rustico"
+                    loading="lazy"
+                    decoding="async">
             </div>
+            <p class="nota-immagini nota-galleria">Fotografie illustrative: non raffigurano il locale specifico.</p>
         </section>
 
        
@@ -259,7 +288,7 @@
     </form>
 </section>
 
-        <section class="prenotazione">
+        <section class="invito-contatti">
             <div>
                 <p class="sottotitolo">Ti aspettiamo</p>
                 <h2>Vieni a trovarci!</h2>

@@ -29,6 +29,16 @@ if (menuToggle && navLinks) {
             menuToggle.textContent = "☰";
         });
     });
+
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && navLinks.classList.contains("active")) {
+            navLinks.classList.remove("active");
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.setAttribute("aria-label", "Apri il menu");
+            menuToggle.textContent = "☰";
+            menuToggle.focus();
+        }
+    });
 }
 
 // PULSANTE TORNA SU
